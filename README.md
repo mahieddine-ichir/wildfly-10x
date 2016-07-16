@@ -2,7 +2,7 @@
 JBoss Wildfly 10+ POC Projects.
 
 # log4j-logstash
-A wildfly project that highlights to Logstash logging using slf4j/log4j. the _log4j_ implementation is injected using the Wildfly module dependency (see _jboss-deployment-structure.xml_)
+A [wildfly](http://wildfly.org/) project that highlights to [Logstash](https://www.elastic.co/products/logstash) logging using slf4j/log4j. the _log4j_ implementation is injected using the Wildfly module dependency (see _jboss-deployment-structure.xml_)
 ```xml
 <module name="org.slf4j" />
 ```
@@ -26,7 +26,7 @@ $> standalone -Dlogstash.host=127.0.0.1 -Dlogstash.port=56445
 ```
 
 #### The logstash config file example
-Here is a basic logstash config file for log4j input plugin
+Here is a basic logstash config file for log4j input plugin (with logstash and [elasticsearch](https://www.elastic.co/products/elasticsearch) run on localhost)
 ```
 input {
   log4j {
